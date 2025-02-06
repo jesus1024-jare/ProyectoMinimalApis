@@ -12,6 +12,7 @@
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.Repository/obj/Debug/net8.0/Api1.Data.Repository.AssemblyInfoInputs.cache
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.Repository/obj/Debug/net8.0/Api1.Data.Repository.AssemblyInfo.cs
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.Repository/obj/Debug/net8.0/Api1.Data.Repository.csproj.CoreCompileInputs.cache
+/home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.Repository/obj/Debug/net8.0/Api1.Data.Repository.sourcelink.json
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.Repository/obj/Debug/net8.0/Api1.Data.Repository.csproj.CopyComplete
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.Repository/obj/Debug/net8.0/Api1.Data.Repository.dll
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.Repository/obj/Debug/net8.0/refint/Api1.Data.Repository.dll

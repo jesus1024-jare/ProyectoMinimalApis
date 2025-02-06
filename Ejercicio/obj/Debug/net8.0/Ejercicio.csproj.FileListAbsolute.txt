@@ -5,15 +5,11 @@
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Ejercicio.runtimeconfig.json
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Ejercicio.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Ejercicio.pdb
-/home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Asp.Versioning.Abstractions.dll
-/home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Asp.Versioning.Http.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Azure.Core.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Azure.Identity.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/MediatR.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/MediatR.Contracts.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
-/home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Versioning.dll
-/home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Microsoft.Data.SqlClient.dll
@@ -91,6 +87,7 @@
 /home/zero/Documentos/Api1/Ejercicio/obj/Debug/net8.0/Ejercicio.csproj.CoreCompileInputs.cache
 /home/zero/Documentos/Api1/Ejercicio/obj/Debug/net8.0/Ejercicio.MvcApplicationPartsAssemblyInfo.cs
 /home/zero/Documentos/Api1/Ejercicio/obj/Debug/net8.0/Ejercicio.MvcApplicationPartsAssemblyInfo.cache
+/home/zero/Documentos/Api1/Ejercicio/obj/Debug/net8.0/Ejercicio.sourcelink.json
 /home/zero/Documentos/Api1/Ejercicio/obj/Debug/net8.0/staticwebassets.build.json
 /home/zero/Documentos/Api1/Ejercicio/obj/Debug/net8.0/staticwebassets.development.json
 /home/zero/Documentos/Api1/Ejercicio/obj/Debug/net8.0/staticwebassets/msbuild.Ejercicio.Microsoft.AspNetCore.StaticWebAssets.props

@@ -16,6 +16,7 @@
 /home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Handlers/obj/Debug/net8.0/Api.Handler.AssemblyInfoInputs.cache
 /home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Handlers/obj/Debug/net8.0/Api.Handler.AssemblyInfo.cs
 /home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Handlers/obj/Debug/net8.0/Api.Handler.csproj.CoreCompileInputs.cache
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Handlers/obj/Debug/net8.0/Api.Handler.sourcelink.json
 /home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Handlers/obj/Debug/net8.0/Api.Handler.csproj.CopyComplete
 /home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Handlers/obj/Debug/net8.0/Api.Handler.dll
 /home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Handlers/obj/Debug/net8.0/refint/Api.Handler.dll

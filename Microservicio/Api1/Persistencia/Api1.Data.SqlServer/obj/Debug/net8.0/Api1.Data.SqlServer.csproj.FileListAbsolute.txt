@@ -11,6 +11,7 @@
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.SqlServer/obj/Debug/net8.0/Api1.Data.SqlServer.AssemblyInfoInputs.cache
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.SqlServer/obj/Debug/net8.0/Api1.Data.SqlServer.AssemblyInfo.cs
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.SqlServer/obj/Debug/net8.0/Api1.Data.SqlServer.csproj.CoreCompileInputs.cache
+/home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.SqlServer/obj/Debug/net8.0/Api1.Data.SqlServer.sourcelink.json
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.SqlServer/obj/Debug/net8.0/Api1.Data.SqlServer.csproj.CopyComplete
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.SqlServer/obj/Debug/net8.0/Api1.Data.SqlServer.dll
 /home/zero/Documentos/Api1/Microservicio/Api1/Persistencia/Api1.Data.SqlServer/obj/Debug/net8.0/refint/Api1.Data.SqlServer.dll

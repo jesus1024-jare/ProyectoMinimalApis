@@ -13,13 +13,9 @@
           "Api1.Data.Models": "1.0.0",
           "Api1.Data.Repository": "1.0.0",
           "Api1.Data.SqlServer": "1.0.0",
-          "Asp.Versioning.Abstractions": "8.1.0",
-          "Asp.Versioning.Http": "8.1.0",
           "MediatR": "12.4.1",
           "MediatR.Contracts": "2.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
-          "Microsoft.AspNetCore.Mvc.Versioning": "5.1.0",
-          "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "5.1.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.1",
           "Microsoft.Extensions.Configuration": "9.0.1",
@@ -28,28 +24,6 @@
         },
         "runtime": {
           "Ejercicio.dll": {}
-        }
-      },
-      "Asp.Versioning.Abstractions/8.1.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "9.0.1"
-        },
-        "runtime": {
-          "lib/net8.0/Asp.Versioning.Abstractions.dll": {
-            "assemblyVersion": "8.1.0.0",
-            "fileVersion": "8.1.8851.31619"
-          }
-        }
-      },
-      "Asp.Versioning.Http/8.1.0": {
-        "dependencies": {
-          "Asp.Versioning.Abstractions": "8.1.0"
-        },
-        "runtime": {
-          "lib/net8.0/Asp.Versioning.Http.dll": {
-            "assemblyVersion": "8.1.0.0",
-            "fileVersion": "8.1.8851.31627"
-          }
         }
       },
       "Azure.Core/1.38.0": {
@@ -116,25 +90,6 @@
           "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "11.0.0.0",
             "fileVersion": "11.1.0.0"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Mvc.Versioning/5.1.0": {
-        "runtime": {
-          "lib/net6.0/Microsoft.AspNetCore.Mvc.Versioning.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.8270.41513"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer/5.1.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Versioning": "5.1.0"
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.8270.41534"
           }
         }
       },
@@ -829,20 +784,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Asp.Versioning.Abstractions/8.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-mpeNZyMdvrHztJwR1sXIUQ+3iioEU97YMBnFA9WLbsPOYhGwDJnqJMmEd8ny7kcmS9OjTHoEuX/bSXXY3brIFA==",
-      "path": "asp.versioning.abstractions/8.1.0",
-      "hashPath": "asp.versioning.abstractions.8.1.0.nupkg.sha512"
-    },
-    "Asp.Versioning.Http/8.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Xu4xF62Cu9JqYi/CTa2TiK5kyHoa4EluPynj/bPFWDmlTIPzuJQbBI5RgFYVRFHjFVvWMoA77acRaFu7i7Wzqg==",
-      "path": "asp.versioning.http/8.1.0",
-      "hashPath": "asp.versioning.http.8.1.0.nupkg.sha512"
-    },
     "Azure.Core/1.38.0": {
       "type": "package",
       "serviceable": true,
@@ -877,20 +818,6 @@
       "sha512": "sha512-RW3etRuy6Xp63cgqfC0r/ITOtUT0f9ymJl1+1XZdzsYUsfv7WBPC2kXGOP8IYpY/6c4Q6805vbIW/88DopUs3w==",
       "path": "mediatr.extensions.microsoft.dependencyinjection/11.1.0",
       "hashPath": "mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Mvc.Versioning/5.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-UX8w9BlCiZpr6Ox4YAve1w0CkI1CAovukGNzKd7v0+5pZc8lzuG5tRovucr1RWIKHs0E/Yx8563CN7KzaB3bpw==",
-      "path": "microsoft.aspnetcore.mvc.versioning/5.1.0",
-      "hashPath": "microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer/5.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-p45pSXCJPbx+p9gFNNQPUC547KpqP5cRJke6aygq/M7UzCrJNmJNqD+65pIpY4muYbINqlgrC47h1oc0WbuP1g==",
-      "path": "microsoft.aspnetcore.mvc.versioning.apiexplorer/5.1.0",
-      "hashPath": "microsoft.aspnetcore.mvc.versioning.apiexplorer.5.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/8.0.11": {
       "type": "package",
