@@ -1,8 +1,8 @@
 using Api.Handler.ClienteComand;
 using Api.Handler.Comand;
+using Asp.Versioning;
 using Ejercicio.Helpers;
 using MediatR;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -24,25 +24,34 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v2"
     });
 
-
     // Filtro para mostrar solo los endpoints de la versión seleccionada
-options.DocInclusionPredicate((docName, apiDesc) =>
-{
-    if (!apiDesc.TryGetMethodInfo(out var methodInfo)) return false;
+    options.DocInclusionPredicate((docName, apiDesc) =>
+    {
+        if (!apiDesc.TryGetMethodInfo(out var methodInfo)) return false;
 
-    // Obtiene la versión de la API desde el atributo ApiVersion
-    var version = methodInfo.DeclaringType?.GetCustomAttributes(true)
-        .OfType<ApiVersionAttribute>()
-        .SelectMany(attr => attr.Versions)
-        .FirstOrDefault();
+        // Obtiene la versión de la API desde el atributo ApiVersion
+        var version = methodInfo.DeclaringType?.GetCustomAttributes(true)
+            .OfType<ApiVersionAttribute>()
+            .SelectMany(attr => attr.Versions)
+            .FirstOrDefault();
 
-    // Si no tiene versión, se muestra en todas las versiones
-    if (version == null) return true;
+        // Si no tiene versión, se muestra en todas las versiones
+        if (version == null) return true;
 
-    // Compara la versión del método con la versión de la documentación solicitada
-    return docName == $"v{version}";
+        // Compara la versión del método con la versión de la documentación solicitada
+        return docName == $"v{version}";
+    });
 });
 
+// Configurar el versionado de la API
+builder.Services.AddApiVersioning(options =>
+{
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.DefaultApiVersion = new ApiVersion(1, 0); // Versión predeterminada
+    options.ApiVersionReader = ApiVersionReader.Combine(
+        new HeaderApiVersionReader("x-api-version"),
+        new QueryStringApiVersionReader("api-version")
+    );
 });
 
 // Configurar DbContext

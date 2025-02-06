@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "W5l08dRu+6by+mgDbcgzMI3UE8tbQUL3k4r560eGBM85HBV+cluCulQtaxr46UAB6mxi2ps+ghcY31xfPLTLOQ==",
+  "dgSpecHash": "3GegbxLjKCiJRnVFn4F7qSbNPEqlc5RbnB1yWO/YNSCRb/jcQY+5p7bn4e8/IuWU6yr5aFZd7dspPgOiQbnIiQ==",
   "success": true,
   "projectFilePath": "/home/zero/Documentos/Api1/Ejercicio/Ejercicio.csproj",
   "expectedPackageFiles": [
+    "/home/zero/.nuget/packages/asp.versioning.abstractions/8.1.0/asp.versioning.abstractions.8.1.0.nupkg.sha512",
+    "/home/zero/.nuget/packages/asp.versioning.http/8.1.0/asp.versioning.http.8.1.0.nupkg.sha512",
     "/home/zero/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/home/zero/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
     "/home/zero/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
