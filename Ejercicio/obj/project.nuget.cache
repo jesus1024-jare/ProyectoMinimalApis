@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rcoX7wc8KHtVaCTPZzPZGAACE5EaUOyb6yBqlY7dKW6Q1kyNODNFYw6Diy0hQhpkr/IT+qJFf0VIg1b9BK18mA==",
+  "dgSpecHash": "W5l08dRu+6by+mgDbcgzMI3UE8tbQUL3k4r560eGBM85HBV+cluCulQtaxr46UAB6mxi2ps+ghcY31xfPLTLOQ==",
   "success": true,
   "projectFilePath": "/home/zero/Documentos/Api1/Ejercicio/Ejercicio.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "/home/zero/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
     "/home/zero/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/home/zero/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "/home/zero/.nuget/packages/microsoft.aspnetcore.mvc.versioning/5.1.0/microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
     "/home/zero/.nuget/packages/microsoft.aspnetcore.openapi/8.0.11/microsoft.aspnetcore.openapi.8.0.11.nupkg.sha512",
     "/home/zero/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/home/zero/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
