@@ -1,0 +1,15 @@
+/home/zero/Documentos/Api1/Api1.Data.Models/bin/Debug/net8.0/Api1.Data.Models.deps.json
+/home/zero/Documentos/Api1/Api1.Data.Models/bin/Debug/net8.0/Api1.Data.Models.dll
+/home/zero/Documentos/Api1/Api1.Data.Models/bin/Debug/net8.0/Api1.Data.Models.pdb
+/home/zero/Documentos/Api1/Api1.Data.Models/bin/Debug/net8.0/Api.core.abstraction.dll
+/home/zero/Documentos/Api1/Api1.Data.Models/bin/Debug/net8.0/Api.core.abstraction.pdb
+/home/zero/Documentos/Api1/Api1.Data.Models/obj/Debug/net8.0/Api1.Data.Models.csproj.AssemblyReference.cache
+/home/zero/Documentos/Api1/Api1.Data.Models/obj/Debug/net8.0/Api1.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+/home/zero/Documentos/Api1/Api1.Data.Models/obj/Debug/net8.0/Api1.Data.Models.AssemblyInfoInputs.cache
+/home/zero/Documentos/Api1/Api1.Data.Models/obj/Debug/net8.0/Api1.Data.Models.AssemblyInfo.cs
+/home/zero/Documentos/Api1/Api1.Data.Models/obj/Debug/net8.0/Api1.Data.Models.csproj.CoreCompileInputs.cache
+/home/zero/Documentos/Api1/Api1.Data.Models/obj/Debug/net8.0/Api1.Data.Models.csproj.CopyComplete
+/home/zero/Documentos/Api1/Api1.Data.Models/obj/Debug/net8.0/Api1.Data.Models.dll
+/home/zero/Documentos/Api1/Api1.Data.Models/obj/Debug/net8.0/refint/Api1.Data.Models.dll
+/home/zero/Documentos/Api1/Api1.Data.Models/obj/Debug/net8.0/Api1.Data.Models.pdb
+/home/zero/Documentos/Api1/Api1.Data.Models/obj/Debug/net8.0/ref/Api1.Data.Models.dll

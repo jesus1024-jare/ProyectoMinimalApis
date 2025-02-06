@@ -1,0 +1,11 @@
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/bin/Debug/net8.0/Api.Query.deps.json
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/bin/Debug/net8.0/Api.Query.dll
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/bin/Debug/net8.0/Api.Query.pdb
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/obj/Debug/net8.0/Api.Query.GeneratedMSBuildEditorConfig.editorconfig
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/obj/Debug/net8.0/Api.Query.AssemblyInfoInputs.cache
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/obj/Debug/net8.0/Api.Query.AssemblyInfo.cs
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/obj/Debug/net8.0/Api.Query.csproj.CoreCompileInputs.cache
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/obj/Debug/net8.0/Api.Query.dll
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/obj/Debug/net8.0/refint/Api.Query.dll
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/obj/Debug/net8.0/Api.Query.pdb
+/home/zero/Documentos/Api1/Microservicio/Api1/Servicios/Api.Query/obj/Debug/net8.0/ref/Api.Query.dll

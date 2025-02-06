@@ -1,0 +1,11 @@
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/bin/Debug/net8.0/Api.core.abstraction.deps.json
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/bin/Debug/net8.0/Api.core.abstraction.dll
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/bin/Debug/net8.0/Api.core.abstraction.pdb
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/obj/Debug/net8.0/Api.core.abstraction.GeneratedMSBuildEditorConfig.editorconfig
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/obj/Debug/net8.0/Api.core.abstraction.AssemblyInfoInputs.cache
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/obj/Debug/net8.0/Api.core.abstraction.AssemblyInfo.cs
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/obj/Debug/net8.0/Api.core.abstraction.csproj.CoreCompileInputs.cache
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/obj/Debug/net8.0/Api.core.abstraction.dll
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/obj/Debug/net8.0/refint/Api.core.abstraction.dll
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/obj/Debug/net8.0/Api.core.abstraction.pdb
+/home/zero/Documentos/Api1/Microservicio/Api1/Contracts/Api.core.abstraction/obj/Debug/net8.0/ref/Api.core.abstraction.dll
