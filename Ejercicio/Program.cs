@@ -96,7 +96,7 @@ grupoVersiones.MapPost("Customer", async (IMediator mediator, CreateNewCustomerC
     return resultado ? Results.Ok("Cliente creado correctamente") : Results.BadRequest("No se pudo crear el cliente");
 });
 
-grupoVersiones.MapPost("Document", async (IMediator mediator, CreateNewDocumentCommand command) =>
+grupoVersiones.MapPost("TypeDocument", async (IMediator mediator, CreateNewDocumentCommand command) =>
 {
     var resultado = await mediator.Send(command);
     return resultado ? Results.Ok("Documento creado correctamente") : Results.BadRequest("No se pudo crear el documento");
@@ -109,7 +109,7 @@ grupoVersiones.MapDelete("Customer/{id}", async (IMediator mediator, int id) =>
     return resultado ? Results.Ok("Cliente eliminado con éxito") : Results.NotFound("Cliente no encontrado");
 });
 
-grupoVersiones.MapDelete("Document/{id}", async (IMediator mediator, int id) =>
+grupoVersiones.MapDelete("TypeDocument/{id}", async (IMediator mediator, int id) =>
 {
     var command = new DeleteDocumentByIDCommand { id = id };
     var resultado = await mediator.Send(command);
@@ -127,7 +127,7 @@ grupoVersiones.MapPut("Customer/{Id}", async (IMediator mediator, UpdateCustomer
     return resultado ? Results.Ok("Cliente actualizado con éxito") : Results.NotFound("Cliente no encontrado");
 });
 
-grupoVersiones.MapPut("Document/{Id}", async (IMediator mediator, UpdateDocumentByIDCommand command) =>
+grupoVersiones.MapPut("TypeDocument/{Id}", async (IMediator mediator, UpdateDocumentByIDCommand command) =>
 {
     if (command.Data == null)
     {
@@ -144,7 +144,7 @@ grupoVersiones.MapGet("Customer", async (IMediator mediator) =>
     return Results.Ok(clientes);
 });
 
-grupoVersiones.MapGet("Document", async (IMediator mediator) =>
+grupoVersiones.MapGet("TypeDocument", async (IMediator mediator) =>
 {
     var query = new GetDocumentCommand();
     var document = await mediator.Send(query);
