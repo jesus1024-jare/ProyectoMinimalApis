@@ -2,10 +2,10 @@ namespace Api.core.abstraction.Contracts
 {
     public interface IRepository<T> : IDomainModels
     {
-        Task<bool> Crear(T cliente);
-        Task<bool> Actualizar(T cliente);
-        Task<bool> EliminarAsync(int id);
-        Task<T> ObtenerPorId(int id);
-        IQueryable<T> ObtenerTodo();
+        Task<bool> Create(T customer);
+        Task<bool> Update(T customer);
+        Task<bool> DeleteAsync(int id);
+        Task<T> GetById(int id);
+        IQueryable<T> GetAll();
     }
 }

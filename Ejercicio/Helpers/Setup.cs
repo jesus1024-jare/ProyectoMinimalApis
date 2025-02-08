@@ -23,17 +23,18 @@ namespace Ejercicio.Helpers
             // instancia de ConnectionStrings
             var connectionStrings = connectionStringsSection.Get<ApplicationSettings>();
 
-            builder.Services.AddDbContext<DbFacturacion>(options => {
+            builder.Services.AddDbContext<DbBillingContext>(options => {
                 options.UseSqlServer(connectionStrings!.ConnectionStrings);
             }
             );
-
-            builder.Services.AddMediatR(options => options.RegisterServicesFromAssembly(typeof(ClienteCommand).Assembly));
-            builder.Services.AddMediatR(options => options.RegisterServicesFromAssembly(typeof(IdEliminarCommand).Assembly));
-            builder.Services.AddMediatR(options => options.RegisterServicesFromAssembly(typeof(IdActualizarCliente).Assembly));
-            builder.Services.AddMediatR(options => options.RegisterServicesFromAssembly(typeof(DocumentoCommand).Assembly));
-            builder.Services.AddTransient<IRepository<Cliente>, ClienteRepository>();
-            builder.Services.AddTransient<IQueryService<Documento>, DocumentoRepository>();
+            builder.Services.AddMediatR(options => options.RegisterServicesFromAssembly(typeof(CreateNewCustomerCommand).Assembly));
+            builder.Services.AddMediatR(options => options.RegisterServicesFromAssembly(typeof(CreateNewDocumentCommand).Assembly));
+            builder.Services.AddMediatR(options => options.RegisterServicesFromAssembly(typeof(DeleteCustomerByIDCommand).Assembly));
+            builder.Services.AddMediatR(options => options.RegisterServicesFromAssembly(typeof(DeleteDocumentByIDCommand).Assembly));
+            builder.Services.AddMediatR(options => options.RegisterServicesFromAssembly(typeof(UpdateCustomerByIDCommand).Assembly));
+            builder.Services.AddMediatR(options => options.RegisterServicesFromAssembly(typeof(UpdateDocumentByIDCommand).Assembly));
+            builder.Services.AddTransient<IRepository<Customer>, CustomerRepository>();
+            builder.Services.AddTransient<IQueryService<TypeDocument>, DocumentoRepository>();
         }   
     }
 }

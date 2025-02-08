@@ -1,19 +1,17 @@
 using System;
 using Api.Handler.Comand;
 using Api1.Data.Models;
+using Api1.Data.SqlServer;
 using MediatR;
 
 namespace Api.Handler.Handler;
 
-public class ActualizarDocumentoHandler : IRequestHandler<IdActualizarDocumento, bool>
+public class ActualizarDocumentoHandler : BaseIQueryService,IRequestHandler<UpdateDocumentByIDCommand, bool>
 {
-    IQueryService<Documento> documentoRepository;
-
-    public ActualizarDocumentoHandler(IQueryService<Documento> documentoRepository){
-        this.documentoRepository = documentoRepository;
+    public ActualizarDocumentoHandler(IQueryService<TypeDocument> documentRepository): base(documentRepository){
     }
 
-    public async Task<bool> Handle(IdActualizarDocumento request, CancellationToken cancellationToken)
+    public async Task<bool> Handle(UpdateDocumentByIDCommand request, CancellationToken cancellationToken)
     {
         try
             {
@@ -24,17 +22,17 @@ public class ActualizarDocumentoHandler : IRequestHandler<IdActualizarDocumento,
                 }
 
                 // Obtener el documento existente
-                var document = await documentoRepository.ObtenerPorId(request.Data.IdTipoDocumento);
+                var document = await _documentRepository.GetById(request.Data.id_Type_Document);
                 if (document == null)
                 {
-                    throw new Exception($"No se encontró un cliente con el ID {request.Data.IdTipoDocumento}.");
+                    throw new Exception($"No se encontró un cliente con el ID {request.Data.id_Type_Document}.");
                 }
 
                 // Actualizar las propiedades del documento existente
-                document.Nombre = request.Data.Nombre;
+                document.DocumentName = request.Data.document_type_name;
 
                 // Guardar los cambios en el repositorio
-                await documentoRepository.Actualizar(document);
+                await _documentRepository.Update(document);
 
                 return true; // Actualización exitosa
             }

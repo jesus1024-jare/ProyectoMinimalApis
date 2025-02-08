@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Api.Handler.Comand;
 
-public class IdEliminarDocumentoCommand : IRequest<bool>
+public class DeleteDocumentByIDCommand : IRequest<bool>
 {
     public int id { get; set; }
 }

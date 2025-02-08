@@ -1,19 +1,17 @@
 using Api.core.abstraction.Contracts;
 using Api.Handler.Comand;
 using Api1.Data.Models;
+using Api1.Data.SqlServer;
 using MediatR;
 
 namespace Api.Handler.Handler
 {
-    public class ActualizarClienteHandler : IRequestHandler<IdActualizarCliente, bool>
+    public class CustomerUpdateMethodHandler : BaseIRepository ,IRequestHandler<UpdateCustomerByIDCommand, bool>
     {
-        private readonly IRepository<Cliente> _clienteRepository;
-
-        public ActualizarClienteHandler(IRepository<Cliente> clienteRepository)
+        public CustomerUpdateMethodHandler(IRepository<Customer> customerRepository): base(customerRepository)
         {
-            _clienteRepository = clienteRepository;
         }
-        public async Task<bool> Handle(IdActualizarCliente request, CancellationToken cancellationToken)
+        public async Task<bool> Handle(UpdateCustomerByIDCommand request, CancellationToken cancellationToken)
         {
             try
             {
@@ -24,22 +22,22 @@ namespace Api.Handler.Handler
                 }
 
                 // Obtener el cliente existente
-                var cliente = await _clienteRepository.ObtenerPorId(request.Id);
+                var cliente = await _customerRepository.GetById(request.Id);
                 if (cliente == null)
                 {
                     throw new Exception($"No se encontró un cliente con el ID {request.Id}.");
                 }
 
                 // Actualizar las propiedades del cliente existente
-                cliente.Name = request.Data.Name;
-                cliente.Tipodocumento = request.Data.Tipodocumento;
-                cliente.NroDocumento = request.Data.NroDocumento;
-                cliente.Direccion = request.Data.Direccion;
-                cliente.Telefono = request.Data.Telefono;
-                cliente.Correo = request.Data.Correo;
+                cliente.NameCustomer = request.Data.Name;
+                cliente.IdTypeDocument = request.Data.id_Type_Document;
+                cliente.DocumentNumber = request.Data.document_Number;
+                cliente.Address = request.Data.customer_Address;
+                cliente.Phone = request.Data.phone_Number;
+                cliente.Mail = request.Data.Email;
 
                 // Guardar los cambios en el repositorio
-                await _clienteRepository.Actualizar(cliente);
+                await _customerRepository.Update(cliente);
 
                 return true; // Actualización exitosa
             }

@@ -1,16 +1,15 @@
 using Api.Handler.ClienteComand;
 using Api.Handler.Comand;
 using Asp.Versioning;
+using Asp.Versioning.Builder;
 using Ejercicio.Helpers;
 using MediatR;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Agregar servicios al contenedor
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
+/* builder.Services.AddSwaggerGen(options =>
 {
     // Configuración para múltiples versiones de la API
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -24,35 +23,39 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v2"
     });
 
-    // Filtro para mostrar solo los endpoints de la versión seleccionada
     options.DocInclusionPredicate((docName, apiDesc) =>
     {
         if (!apiDesc.TryGetMethodInfo(out var methodInfo)) return false;
 
-        // Obtiene la versión de la API desde el atributo ApiVersion
         var version = methodInfo.DeclaringType?.GetCustomAttributes(true)
             .OfType<ApiVersionAttribute>()
             .SelectMany(attr => attr.Versions)
             .FirstOrDefault();
-
-        // Si no tiene versión, se muestra en todas las versiones
         if (version == null) return true;
 
-        // Compara la versión del método con la versión de la documentación solicitada
         return docName == $"v{version}";
     });
 });
+ */
 
-// Configurar el versionado de la API
+builder.Services.AddSwaggerGen();
+
 builder.Services.AddApiVersioning(options =>
 {
+    options.ReportApiVersions = true;  
     options.AssumeDefaultVersionWhenUnspecified = true;
-    options.DefaultApiVersion = new ApiVersion(1, 0); // Versión predeterminada
+    options.DefaultApiVersion = new ApiVersion(1, 0);
     options.ApiVersionReader = ApiVersionReader.Combine(
-        new HeaderApiVersionReader("x-api-version"),
+        new UrlSegmentApiVersionReader(),
+        new HeaderApiVersionReader("X-Api-Version"),
         new QueryStringApiVersionReader("api-version")
     );
-});
+}).AddApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'V";
+    options.SubstituteApiVersionInUrl = true;
+})
+.AddMvc();
 
 // Configurar DbContext
 Setup.Configure(builder);
@@ -77,37 +80,44 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+ApiVersionSet listaVersionesApi = app.NewApiVersionSet()
+.HasApiVersion(new ApiVersion(1, 0))
+.ReportApiVersions()
+.Build();
+
 // Version 1 de los endpoints
-var v1 = app.MapGroup("/api/v1").WithTags("v1");
-v1.MapPost("/CrearCliente", async (IMediator mediator, ClienteCommand command) =>
+var grupoVersiones = app.MapGroup("/api/v{version:apiVersion}")
+.WithApiVersionSet(listaVersionesApi);
+
+
+grupoVersiones.MapPost("Customer", async (IMediator mediator, CreateNewCustomerCommand command) =>
 {
     var resultado = await mediator.Send(command);
     return resultado ? Results.Ok("Cliente creado correctamente") : Results.BadRequest("No se pudo crear el cliente");
 });
 
-v1.MapPost("/CrearDocumento", async (IMediator mediator, DocumentoCommand command) =>
+grupoVersiones.MapPost("Document", async (IMediator mediator, CreateNewDocumentCommand command) =>
 {
     var resultado = await mediator.Send(command);
     return resultado ? Results.Ok("Documento creado correctamente") : Results.BadRequest("No se pudo crear el documento");
 });
 
-v1.MapDelete("/EliminarCliente/{id}", async (IMediator mediator, int id) =>
+grupoVersiones.MapDelete("Customer/{id}", async (IMediator mediator, int id) =>
 {
-    var command = new IdEliminarCommand { Id = id };
+    var command = new DeleteCustomerByIDCommand { Id = id };
     var resultado = await mediator.Send(command);
     return resultado ? Results.Ok("Cliente eliminado con éxito") : Results.NotFound("Cliente no encontrado");
 });
 
-v1.MapDelete("/EliminarDocumento/{id}", async (IMediator mediator, int id) =>
+grupoVersiones.MapDelete("Document/{id}", async (IMediator mediator, int id) =>
 {
-    var command = new IdEliminarDocumentoCommand { id = id };
+    var command = new DeleteDocumentByIDCommand { id = id };
     var resultado = await mediator.Send(command);
     return resultado ? Results.Ok("Documento eliminado con éxito") : Results.NotFound("Documento no encontrado");
 });
 
-// Version 2 de los endpoints
-var v2 = app.MapGroup("/api/v2").WithTags("v2");
-v2.MapPut("/ActualizarCliente/{Id}", async (IMediator mediator, IdActualizarCliente command) =>
+
+grupoVersiones.MapPut("Customer/{Id}", async (IMediator mediator, UpdateCustomerByIDCommand command) =>
 {
     if (command.Data == null)
     {
@@ -117,7 +127,7 @@ v2.MapPut("/ActualizarCliente/{Id}", async (IMediator mediator, IdActualizarClie
     return resultado ? Results.Ok("Cliente actualizado con éxito") : Results.NotFound("Cliente no encontrado");
 });
 
-v2.MapPut("/ActualizarDocumento/{Id}", async (IMediator mediator, IdActualizarDocumento command) =>
+grupoVersiones.MapPut("Document/{Id}", async (IMediator mediator, UpdateDocumentByIDCommand command) =>
 {
     if (command.Data == null)
     {
@@ -127,18 +137,18 @@ v2.MapPut("/ActualizarDocumento/{Id}", async (IMediator mediator, IdActualizarDo
     return resultado ? Results.Ok("Documento actualizado con éxito") : Results.NotFound("Documento no encontrado");
 });
 
-v2.MapGet("/ObtenerClientes", async (IMediator mediator) =>
+grupoVersiones.MapGet("Customer", async (IMediator mediator) =>
 {
-    var query = new ObtenerClienteCommand(); 
-    var clientes = await mediator.Send(query); 
-    return Results.Ok(clientes); 
+    var query = new GetClientCommand();
+    var clientes = await mediator.Send(query);
+    return Results.Ok(clientes);
 });
 
-v2.MapGet("/ObtenerDocumento", async (IMediator mediator) =>
+grupoVersiones.MapGet("Document", async (IMediator mediator) =>
 {
-    var query = new ObtenerDocumentoCommand(); 
-    var document = await mediator.Send(query); 
-    return Results.Ok(document); 
+    var query = new GetDocumentCommand();
+    var document = await mediator.Send(query);
+    return Results.Ok(document);
 });
 
 app.Run();

@@ -5,19 +5,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Api1.Data.Repository.ClienteRepository;
 
-public class DocumentoRepository : IQueryService<Documento>
+public class DocumentoRepository : BaseRepository,IQueryService<TypeDocument>
 {
-    DbFacturacion context;
-    public DocumentoRepository(DbFacturacion context)
+    public DocumentoRepository(DbBillingContext context): base(context)
     {
-        this.context = context;
     }
-    public async Task<bool> Actualizar(Documento cliente)
+    public async Task<bool> Update(TypeDocument document)
     {
         try
         {
-            context.Entry(cliente).State = EntityState.Modified;
-            await context.SaveChangesAsync();
+            _context.Entry(document).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
             return true;
         }
         catch (Exception ex)
@@ -27,12 +25,12 @@ public class DocumentoRepository : IQueryService<Documento>
         }
     }
 
-    public async Task<bool> Crear(Documento cliente)
+    public async Task<bool> Create(TypeDocument document)
     {
         try
         {
-            context.Documentos.Add(cliente);
-            await context.SaveChangesAsync();
+            _context.TypeDocuments.Add(document);
+            await _context.SaveChangesAsync();
             return true;
         }
         catch (Exception ex)
@@ -42,13 +40,13 @@ public class DocumentoRepository : IQueryService<Documento>
         }
     }
 
-    public async Task<bool> EliminarAsync(int id)
+    public async Task<bool> DeleteAsync(int id)
     {
         try
         {
-            var cliente = await context.Documentos.FindAsync(id);
-            context.Documentos.Remove(cliente);
-            await context.SaveChangesAsync();
+            var cliente = await _context.TypeDocuments.FindAsync(id);
+            _context.TypeDocuments.Remove(cliente);
+            await _context.SaveChangesAsync();
             return true;
         }
         catch (Exception ex)
@@ -58,13 +56,13 @@ public class DocumentoRepository : IQueryService<Documento>
         }
     }
 
-    public async Task<Documento> ObtenerPorId(int id)
+    public async Task<TypeDocument> GetById(int id)
     {
-        return await context.Documentos.FindAsync(id);
+        return await _context.TypeDocuments.FindAsync(id);
     }
 
-    public IQueryable<Documento> ObtenerTodo()
+    public IQueryable<TypeDocument> GetAll()
     {
-        return context.Documentos.AsQueryable();
+        return _context.TypeDocuments.AsQueryable();
     }
 }

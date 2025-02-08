@@ -4,9 +4,9 @@ using MediatR;
 
 namespace Api.Handler.ClienteComand
 {
-    public class ClienteCommand : IRequest<bool>
+    public class CreateNewCustomerCommand : IRequest<bool>
     {
         [Required]
-        public ClienteDTO Data {get; set;} = default!;
+        public CustomerDTO Data {get; set;} = default!;
     }
 }

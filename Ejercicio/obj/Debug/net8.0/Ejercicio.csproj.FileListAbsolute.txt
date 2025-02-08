@@ -102,7 +102,7 @@
 /home/zero/Documentos/Api1/Ejercicio/obj/Debug/net8.0/Ejercicio.pdb
 /home/zero/Documentos/Api1/Ejercicio/obj/Debug/net8.0/Ejercicio.genruntimeconfig.cache
 /home/zero/Documentos/Api1/Ejercicio/obj/Debug/net8.0/ref/Ejercicio.dll
-/home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Versioning.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Asp.Versioning.Abstractions.dll
 /home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Asp.Versioning.Http.dll
-/home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+/home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Asp.Versioning.Mvc.dll
+/home/zero/Documentos/Api1/Ejercicio/bin/Debug/net8.0/Asp.Versioning.Mvc.ApiExplorer.dll

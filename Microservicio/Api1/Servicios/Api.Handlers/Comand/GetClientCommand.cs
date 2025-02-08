@@ -4,6 +4,6 @@ using MediatR;
 
 namespace Api.Handler.Comand;
 
-public class ObtenerClienteCommand : IRequest<List<ClienteDTO>>
+public class GetClientCommand : IRequest<List<CustomerDTO>>
 {
 }

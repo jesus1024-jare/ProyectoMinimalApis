@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Api.Handler.Comand;
 
-public class ObtenerDocumentoCommand : IRequest<List<DocumentoDTO>>
+public class GetDocumentCommand : IRequest<List<TypeDocumentDTO>>
 {
 
 }

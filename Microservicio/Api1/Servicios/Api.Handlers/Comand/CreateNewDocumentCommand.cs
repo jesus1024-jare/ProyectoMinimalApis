@@ -5,8 +5,8 @@ using MediatR;
 
 namespace Api.Handler.Comand;
 
-public class DocumentoCommand : IRequest<bool>
+public class CreateNewDocumentCommand : IRequest<bool>
 {
     [Required]
-    public DocumentoDTO Data { get; set; }
+    public TypeDocumentDTO Data { get; set; }
 }
